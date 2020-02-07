@@ -213,7 +213,7 @@ body {
     
 }
 
-//---------------- Section About ---------------------//@extend
+//---------------- Section About ---------------------//
 
 .about {
     // display: block;
@@ -320,4 +320,64 @@ body {
             padding-bottom: 70px;
         }
     }
+}
+
+//---------------- Section Service ---------------------//
+
+.service {
+    &__row {
+        @include flexbox();
+        flex-direction: column;
+        background-color: #3d3d3d;
+    }
+    &__column {
+        flex: 0 0 100%;
+        @include ts(red);
+    }
+    &__title {}
+    &__item-row {
+        @include flexbox();
+    }
+    &__item {
+        flex: 0 0 33.33%;
+    }
+    &__image {}
+    &__text {
+        flex: 0 0 35%;
+        p{
+            color: #cdc8c8;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+        }
+    }
+    &__feedback {
+        @include flexbox();
+    }
+    &__control-arrows {}
+    &__arrow-left {}
+    &__arrow-right {}
+    &__carousel {
+        flex: 0 0 65%;
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    &__person-card {}
+}
+.my-title {
+    &__line-effect {
+        &_different {}
+    }
+    &__title {}
+}
+.info-box {
+}
+.ibg {
+}
+.person-card {
+    &__info {}
+    &__num {}
+    &__who {}
 }
