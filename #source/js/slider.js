@@ -13,7 +13,10 @@ if ($('.slider__body').length>0){
         prevArrow: '<button type="button" class="slick-prev"></button>',
         responsive:[{
             breakpoint:768,
-            settings: {}
+            settings: {
+            }
         }]
     });
 }
+
+

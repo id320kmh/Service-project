@@ -4,10 +4,11 @@
 // @import url('http://allfont.ru/allfont.css?fonts=sansation-regular');
 
 
-@import "fonts.css";
+
+@import "../fonts/sansation.css";
 
 
-$fontfamily: "Sansation Regular";
+$fontfamily: "Sansation";
 
 $minwidth: 320px;
 @import "reset.scss";
@@ -257,7 +258,7 @@ body {
             height: 3px !important;
         }
     }
-    &__more-details {
+    &__more-details, .more-details {
         a {
             display: block;
             width: 200px;
@@ -267,6 +268,9 @@ body {
             @media (max-width:780px){
                 width: 250px;
                 height: 60px;
+            }
+            &:hover {
+                opacity: 0.8;
             }
         }
     }
@@ -328,22 +332,57 @@ body {
     &__row {
         @include flexbox();
         flex-direction: column;
-        background-color: #3d3d3d;
+        background-color: #373737;
     }
     &__column {
         flex: 0 0 100%;
-        @include ts(red);
+        // position: relative;
     }
-    &__title {}
+    &__title {
+        height: 140px;
+        @media (max-width:1050px){
+            height: 200px;
+        }
+
+    }
     &__item-row {
         @include flexbox();
+        background-color: #3d3d3d;
+        min-height: 550px;
     }
     &__item {
         flex: 0 0 33.33%;
+        padding: 50px 4% 40px 4%;
+        @include flexbox();
+        flex-direction: column;
+        align-items: center;
+        color: #f7f7f7;
+        h3 {
+            margin-top: 55px;
+            color: #f7f7f7;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: uppercase;
+        }
+        span {
+            display: block;
+        }
+        &:hover {
+            background-color: #097e89;
+        }
     }
-    &__image {}
+    &__image {
+        img {
+            display: block;
+            width: 125px;
+            height: 74px;
+            // @include ts(yellow);
+        }
+    }
     &__text {
         flex: 0 0 35%;
+        height: auto;
         p{
             color: #cdc8c8;
             font-size: 18px;
@@ -353,6 +392,7 @@ body {
     }
     &__feedback {
         @include flexbox();
+        background-color: #3d3d3d;
     }
     &__control-arrows {}
     &__arrow-left {}
@@ -365,17 +405,75 @@ body {
         gap: 20px;
     }
     &__person-card {}
+    &__more-details {
+        border-radius: 2px;
+        background-color: #959595;
+        text-align: center;
+        a {
+            display: block;
+            width: 200px;
+            height: 40px;
+            line-height: 16px;
+            &:hover {
+                background-color: #3d3d3d;
+            }
+        }
+    }
+    &__control-arrow {
+        $arrowsize: 40px;
+        @include flexbox();
+        width: 100%;
+        justify-content: end;
+        // height: 32px;
+        flex-direction: row;
+        // position: relative;
+        right:0;
+        gap: 1px;
+        // margin: ;
+        span {
+            flex: 0 0 $arrowsize;
+            height: $arrowsize;
+            background-color: #089eac;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }
 .my-title {
+    background-color: #373737;
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
     &__line-effect {
-        &_different {}
+        @include flexbox();
+        flex:0 0 33.33%;
+        hr {
+            flex: 0 0 20%;
+            height: 1px;
+            background-color: #ffffff;
+        }
+        &_different {
+            height: 3px !important;
+            margin-top: -1px;
+        }
     }
-    &__title {}
+    &__title {
+        flex: 0 0 auto;
+        color: #f7f7f7;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+    }
 }
 .info-box {
 }
-.ibg {
-}
+
 .person-card {
     &__info {}
     &__num {}

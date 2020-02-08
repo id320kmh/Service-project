@@ -1,36 +1,36 @@
 @font-face {
     font-family: 'Sansation';
-    src: local('Sansation Light'), url('sansationlight.woff2') format('woff2'), url('sansationlight.woff') format('woff'), url('sansationlight.ttf') format('truetype');
+    src: local('Sansation Light'), url('../fonts/sansationlight.woff2') format('woff2'), url('../fonts/sansationlight.woff') format('woff'), url('../fonts/sansationlight.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Sansation';
-    src: local('Sansation Light Italic'), url('sansationlightitalic.woff2') format('woff2'), url('sansationlightitalic.woff') format('woff'), url('sansationlightitalic.ttf') format('truetype');
+    src: local('Sansation Light Italic'), url('../fonts/sansationlightitalic.woff2') format('woff2'), url('../fonts/sansationlightitalic.woff') format('woff'), url('../fonts/sansationlightitalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
 }
 @font-face {
     font-family: 'Sansation';
-    src: local('Sansation Regular'), url('sansationregular.woff2') format('woff2'), url('sansationregular.woff') format('woff'), url('sansationregular.ttf') format('truetype');
+    src: local('Sansation Regular'), url('../fonts/sansationregular.woff2') format('woff2'), url('../fonts/sansationregular.woff') format('woff'), url('../fonts/sansationregular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Sansation';
-    src: local('Sansation Italic'), url('sansationitalic.woff2') format('woff2'), url('sansationitalic.woff') format('woff'), url('sansationitalic.ttf') format('truetype');
+    src: local('Sansation Italic'), url('../fonts/sansationitalic.woff2') format('woff2'), url('../fonts/sansationitalic.woff') format('woff'), url('../fonts/sansationitalic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
 }
 @font-face {
     font-family: 'Sansation';
-    src: local('Sansation Bold'), url('sansationbold.woff2') format('woff2'), url('sansationbold.woff') format('woff'), url('sansationbold.ttf') format('truetype');
+    src: local('Sansation Bold'), url('../fonts/sansationbold.woff2') format('woff2'), url('../fonts/sansationbold.woff') format('woff'), url('../fonts/sansationbold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Sansation';
-    src: local('Sansation Bold Italic'), url('sansationbolditalic.woff2') format('woff2'), url('sansationbolditalic.woff') format('woff'), url('sansationbolditalic.ttf') format('truetype');
+    src: local('Sansation Bold Italic'), url('../fonts/sansationbolditalic.woff2') format('woff2'), url('../fonts/sansationbolditalic.woff') format('woff'), url('../fonts/sansationbolditalic.ttf') format('truetype');
     font-weight: 700;
     font-style: italic;
 }
