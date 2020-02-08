@@ -371,6 +371,9 @@ body {
         &:hover {
             background-color: #097e89;
         }
+        @media (max-width:1050px){
+            padding: 50px 2% 40px 2%;
+        }
     }
     &__image {
         img {
@@ -393,6 +396,7 @@ body {
     &__feedback {
         @include flexbox();
         background-color: #3d3d3d;
+        align-items: center;
     }
     &__control-arrows {}
     &__arrow-left {}
@@ -400,11 +404,20 @@ body {
     &__carousel {
         flex: 0 0 65%;
         @include flexbox();
-        justify-content: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        height: 250px;
         align-items: center;
-        gap: 20px;
     }
-    &__person-card {}
+    &__person-card {
+        // flex: 0 0 256px;
+        gap: 20px;
+        img {
+            width: 202px;
+            height: 223px;
+        }
+
+    }
     &__more-details {
         border-radius: 2px;
         background-color: #959595;
@@ -429,15 +442,29 @@ body {
         // position: relative;
         right:0;
         gap: 1px;
-        // margin: ;
+        margin-top: -$arrowsize;
         span {
             flex: 0 0 $arrowsize;
             height: $arrowsize;
             background-color: #089eac;
+            
+            // background: none;
             a {
                 display: block;
                 width: 100%;
                 height: 100%;
+                background-size: cover;
+                &.service__btn-left {
+                    background: url(../img/service/icons/arrow1.png) no-repeat center center;
+                    background-size: cover;
+                }
+                &.service__btn-right {
+                    background: url(../img/service/icons/arrow2.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+            &:hover {
+                background-color: #32A8C2;
             }
         }
     }
