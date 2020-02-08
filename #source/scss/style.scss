@@ -386,6 +386,7 @@ body {
     &__text {
         flex: 0 0 35%;
         height: auto;
+        padding: 50px 60px;
         p{
             color: #cdc8c8;
             font-size: 18px;
@@ -430,24 +431,27 @@ body {
             &:hover {
                 background-color: #3d3d3d;
             }
+            @media (max-width: 776px){
+                width: 150px;
+                height: 50px;
+                font-size: 16px;
+                line-height: 16px;
+                padding-top: 10px;
+            }
         }
     }
     &__control-arrow {
         $arrowsize: 40px;
         @include flexbox();
         width: 100%;
-        justify-content: end;
-        // height: 32px;
-        flex-direction: row;
-        // position: relative;
-        right:0;
+        justify-content: flex-end;
         gap: 1px;
         margin-top: -$arrowsize;
         span {
             flex: 0 0 $arrowsize;
             height: $arrowsize;
             background-color: #089eac;
-            
+            margin-left: 1px;
             // background: none;
             a {
                 display: block;
@@ -497,7 +501,19 @@ body {
         line-height: 26px;
         text-transform: uppercase;
     }
+    &_white {
+        background-color: #fefefe;
+        p{
+
+            color: #656464;
+        }
+        hr {
+            background-color: #656464;
+        }
+    }
 }
+
+
 .info-box {
 }
 
