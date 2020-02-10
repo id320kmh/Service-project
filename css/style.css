@@ -458,10 +458,10 @@ body {
   .slider__arrow button {
     background: none; }
   .slider__arrow_l {
-    background: url(../img/slider/icons/1.png) 0 0/100% 100% no-repeat;
+    background: url(../img/slider/icons/2.png) 0 0/100% 100% no-repeat;
     opacity: 0.4; }
   .slider__arrow_r {
-    background: url(../img/slider/icons/2.png) 0 0/100% 100% no-repeat;
+    background: url(../img/slider/icons/1.png) 0 0/100% 100% no-repeat;
     opacity: 0.4; }
   .slider__text {
     -webkit-box-flex: 0;

@@ -1,16 +1,18 @@
 if ($('.slider__body').length>0){
+    console.log('dgdgfe');
     
     $('.slider__body').slick({
         autoplay: true,
         infinite: false,
         dots: false,
-        // arrows: true,
+        arrows: true,
         accesibility: false,
         slidesToShow: 1,
         autoplaySpeed: 3000,
         adaptiveHeight: false,
-        nextArrow: '<button type="button" class="slick-next"></button>',
-        prevArrow: '<button type="button" class="slick-prev"></button>',
+        appendArrows: '.slider__control',
+        nextArrow: '<span class="slider__arrow slider__arrow_l"><button type="button" class="slick-next"></button></span>',
+        prevArrow: '<span class="slider__arrow slider__arrow_r"><button type="button" class="slick-prev"></button></span>',
         responsive:[{
             breakpoint:768,
             settings: {
