@@ -886,3 +886,32 @@ body {
       color: #656464; }
     .my-title_white hr {
       background-color: #656464; }
+
+.person-card {
+  position: relative; }
+  .person-card__info {
+    width: 180px;
+    height: 32px;
+    position: absolute;
+    top: 180px;
+    left: 11px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .person-card__num {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 43px;
+    flex: 0 0 43px;
+    height: 32px;
+    background: #fff; }
+  .person-card__who {
+    background: #fff;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 130px;
+    flex: 0 0 130px; }

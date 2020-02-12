@@ -529,7 +529,24 @@ body {
 }
 
 .person-card {
-    &__info {}
-    &__num {}
-    &__who {}
+    position: relative;
+    &__info {
+        width: 180px;
+        height: 32px;
+        position: absolute;
+        top:180px; left: 11px;
+        // background: #fff;
+        @include flexbox();
+        justify-content: space-between;
+    }
+    &__num {
+        flex: 0 0 43px;
+        // width: 43px;
+        height: 32px;
+        background: #fff;
+    }
+    &__who {
+        background: #fff;
+        flex: 0 0 130px;
+    }
 }
