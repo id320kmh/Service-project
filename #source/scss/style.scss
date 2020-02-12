@@ -394,29 +394,103 @@ body {
     &__text {
         flex: 0 0 35%;
         height: auto;
-        padding: 50px 60px;
+        padding: 50px 100px;
+        @include flexbox();
+        flex-direction: column;
         p{
             color: #cdc8c8;
             font-size: 18px;
             font-weight: 400;
             line-height: 26px;
+            @media (max-width:675px){
+                // width: 100%;
+                font-size: 34px;
+                line-height: normal;
+            }
         }
+        hr {
+            width: 50%;
+            height: 2px;
+            margin: 20px auto;
+            position: relative;
+            left:-15px;
+            background-color: #cdc8c8;
+        }
+        @media (max-width:1300px){
+            padding: 50px 50px;
+        }
+        @media (max-width:850px){
+            padding: 50px 20px;
+        }
+        @media (max-width:675px){
+            @include flexorder(2);
+            padding: 30px 40px;
+            width: 100%;
+        }
+        @media (max-width:450px){
+            padding: 20px 20px;
+        }
+    
     }
     &__feedback {
         @include flexbox();
         background-color: #3d3d3d;
         align-items: center;
+
+        @media (max-width:675px){
+            flex-direction: column;
+        }
     }
-    &__control-arrows {}
-    &__arrow-left {}
-    &__arrow-right {}
+    &__control-arrows {
+        flex: 0 0 100%;
+        @include flexbox();
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        margin-top: 50px;
+        padding: 0 100px 0 60px;
+        span {
+            flex: 0 0 17px;
+            height: 25px;
+            button {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+        
+        @media (max-width:1300px){
+            padding: 0 50px 0 30px;
+        }
+
+    }
+    &__arrow-left {
+        background: url(../img/service/icons/arrow_type2_left.png) 100% 100% no-repeat;
+    }
+    &__arrow-right {
+        background: url(../img/service/icons/arrow_type2_right.png) no-repeat;
+    }
     &__carousel {
-        flex: 0 0 65%;
+        // @include ts(red);
+        // flex: 0 0 65%;
+        width: 65%;
         @include flexbox();
         justify-content: flex-start;
-        overflow: hidden;
         height: 250px;
         align-items: center;
+        @media (max-width:675px){
+            @include flexorder(1);
+            width: 250px;
+            padding: 50px 0 0 0;
+            justify-content: center;
+            position: relative;
+            left:25px;
+            // margin-left: -200px;
+        }
     }
     &__person-card {
         // flex: 0 0 256px;
@@ -480,6 +554,69 @@ body {
             }
         }
     }
+
+    
+    &__clients-body {
+        @include flexbox();
+        flex-direction: column;
+        background-color: #fbfbfbf8;
+        padding: 20px 0;
+    }
+    &__clients-row {
+        flex: 0 0 250px;
+        // @include ts(red);
+        background-color: #fff;
+        @include flexbox();
+       
+    }
+    &__half-row {
+        flex: 0 0 50%;
+        @include flexbox();
+        @media (max-width: 800px){
+            flex-direction: column;
+        }
+    }
+    &__client-card {
+        flex: 0 0 50%;
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+    }
+    &__client-logo {
+        // @include ts(red);
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background: url(../img/service/clients/1.png) no-repeat center center;
+    }
+    &__client-logo1 {
+        background: url(../img/service/clients/1.png) no-repeat center center;
+    }
+    &__client-logo2 {
+        background: url(../img/service/clients/2.png) no-repeat center center;
+    }
+    &__client-logo3 {
+        background: url(../img/service/clients/3.png) no-repeat center center;
+    }
+    &__client-logo4 {
+        background: url(../img/service/clients/4.png) no-repeat center center;
+    }
+    &__client-logo5 {
+        background: url(../img/service/clients/5.png) no-repeat center center;
+    }
+    &__client-logo6 {
+        background: url(../img/service/clients/6.png) no-repeat center center;
+    }
+    &__client-logo7 {
+        background: url(../img/service/clients/7.png) no-repeat center center;
+    }
+    &__client-logo8 {
+        background: url(../img/service/clients/8.png) no-repeat center center;
+    }
+
+
 }
 
 
@@ -491,6 +628,7 @@ body {
     align-items: center;
     width: 100%;
     padding: 0 40px;
+    overflow-x: hidden !important;
     &__line-effect {
         @include flexbox();
         flex:0 0 33.33%;
@@ -504,6 +642,12 @@ body {
             margin-top: -1px;
         }
     }
+    &_first {
+        overflow-x: hidden !important;
+    }
+    &_second {
+
+    }
     &__title {
         flex: 0 0 auto;
         color: #f7f7f7;
@@ -511,6 +655,7 @@ body {
         font-weight: 400;
         line-height: 26px;
         text-transform: uppercase;
+     
     }
     &_white {
         background-color: #fefefe;
@@ -529,6 +674,7 @@ body {
 }
 
 .person-card {
+    
     position: relative;
     &__info {
         width: 180px;
@@ -538,15 +684,29 @@ body {
         // background: #fff;
         @include flexbox();
         justify-content: space-between;
+        font-size: 12px;
+
+        color: #272727;
+        font-family: Sansation;
+        font-size: 14px;
+        font-weight: 400;
+        // line-height: 26px;
     }
     &__num {
         flex: 0 0 43px;
-        // width: 43px;
         height: 32px;
         background: #fff;
+        text-align: center;
+        padding-top: 10px;
     }
     &__who {
         background: #fff;
         flex: 0 0 130px;
+        padding: 2px 0 0 5px;
+        p {
+            &:first-child {
+                font-weight: bold;
+            }
+        }
     }
 }
