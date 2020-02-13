@@ -99,6 +99,7 @@ if ($('.service__item-row').length>0){
                 }
             }
         ]
+        
     });
 }
 

@@ -6,6 +6,11 @@
 
 $(document).ready(function(){
     
+    
+   
+    
+
+
 });
 
 $('.wrapper').addClass('loader');
@@ -128,6 +133,7 @@ if ($('.service__item-row').length>0){
                 }
             }
         ]
+        
     });
 }
 
@@ -389,7 +395,7 @@ function forms(){
 	$.each($('input.phone'), function(index, val) {
 		$(this).attr('type','tel');
 		$(this).focus(function(){
-			$(this).inputmask('+7(999) 999 9999',{clearIncomplete: true,clearMaskOnLostFocus: true,
+			$(this).inputmask('+38(999) 999 9999',{clearIncomplete: true,clearMaskOnLostFocus: true,
 				"onincomplete": function(){maskclear($(this));}
 			});
 			$(this).addClass('focus');
@@ -630,6 +636,7 @@ function formValidate(input){
 		if(input.val()=='' || input.val()==input.attr('data-value')){
 			er++;
 			addError(input);
+			
 		}else{
 			removeError(input);
 		}
@@ -643,9 +650,10 @@ function formValidate(input){
 		}
 	}
 	if(input.hasClass('name')){
-		if(!(/^[А-Яа-яa-zA-Z-]+( [А-Яа-яa-zA-Z-]+)$/.test(input.val()))){
+		if( !(/^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/.test(input.val())) ){
 				er++;
-			addError(input);
+			addError(input);	
+			
 		}
 	}
 	if(input.hasClass('pass-2')){
@@ -684,6 +692,7 @@ function addError(input){
 		input.addClass('err');
 		input.parent().addClass('err');
 		input.parent().find('.form__error').remove();
+		
 	if(input.hasClass('email')){
 			var error='';
 		if(input.val()=='' || input.val()==input.attr('data-value')){
