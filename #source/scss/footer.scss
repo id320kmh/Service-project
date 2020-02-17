@@ -46,9 +46,9 @@
     &__topic {
         flex: 0 0 33.33%;
         @media (max-width: 500px){
-            li:not(:first-child) {
-                display: none;
-            }
+            // li:not(:first-child) {
+            //     display: none;
+            // }
             li:first-child:hover{
                 cursor: pointer;
                 opacity: 0.7;
@@ -97,6 +97,13 @@
             }
             @media (max-width: 700px){
                 font-size: 24px;
+            }
+        }
+        @media (max-width: 500px){
+            &_hidden{
+                li:not(:first-child) {
+                    display: none;
+                }
             }
         }
 

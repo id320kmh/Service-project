@@ -400,8 +400,6 @@ body {
   @media (max-width: 500px) {
     .footer__topic {
       margin-top: 30px; }
-      .footer__topic li:not(:first-child) {
-        display: none; }
       .footer__topic li:first-child:hover {
         cursor: pointer;
         opacity: 0.7;
@@ -448,6 +446,9 @@ body {
     @media (max-width: 700px) {
       .footer__list h4 {
         font-size: 24px; } }
+  @media (max-width: 500px) {
+    .footer__list_hidden li:not(:first-child) {
+      display: none; } }
 
 .footer__subscibe {
   -webkit-box-flex: 0;
